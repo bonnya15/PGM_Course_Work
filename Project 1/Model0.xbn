@@ -1,0 +1,111 @@
+<?xml version="1.0"?>
+<ANALYSISNOTEBOOK NAME="Notebook.bndefault" ROOT="bndefault">
+  <BNMODEL NAME="bndefault"><STATICPROPERTIES><FORMAT>MSR DTAS XML</FORMAT>
+        <VERSION>1.0</VERSION>
+        <CREATOR>Microsoft Research DTAS</CREATOR>
+        </STATICPROPERTIES>
+      <DYNAMICPROPERTIES><PROPERTYTYPE NAME="DTASDG_Notes" TYPE="stringarray"><COMMENT>Notes on the diagram</COMMENT>
+          </PROPERTYTYPE>
+        <PROPERTYTYPE NAME="MS_Addins" TYPE="stringarray"/>
+        </DYNAMICPROPERTIES>
+      <VARIABLES><VAR NAME="A" TYPE="discrete" XPOS="27173" YPOS="25"><FULLNAME>A</FULLNAME>
+          <STATENAME>Yes</STATENAME>
+          <STATENAME>No</STATENAME>
+          </VAR>
+        <VAR NAME="B" TYPE="discrete" XPOS="-2355" YPOS="7013"><FULLNAME>B</FULLNAME>
+          <STATENAME>Yes</STATENAME>
+          <STATENAME>No</STATENAME>
+          </VAR>
+        <VAR NAME="E" TYPE="discrete" XPOS="17541" YPOS="11985"><FULLNAME>E</FULLNAME>
+          <STATENAME>Yes</STATENAME>
+          <STATENAME>No</STATENAME>
+          </VAR>
+        <VAR NAME="F" TYPE="discrete" XPOS="4735" YPOS="19659"><FULLNAME>F</FULLNAME>
+          <STATENAME>Yes</STATENAME>
+          <STATENAME>No</STATENAME>
+          </VAR>
+        <VAR NAME="L" TYPE="discrete" XPOS="10823" YPOS="6323"><FULLNAME>L</FULLNAME>
+          <STATENAME>Yes</STATENAME>
+          <STATENAME>No</STATENAME>
+          </VAR>
+        <VAR NAME="S" TYPE="discrete" XPOS="3996" YPOS="133"><FULLNAME>S</FULLNAME>
+          <STATENAME>Yes</STATENAME>
+          <STATENAME>No</STATENAME>
+          </VAR>
+        <VAR NAME="T" TYPE="discrete" XPOS="27331" YPOS="4313"><FULLNAME>T</FULLNAME>
+          <STATENAME>Yes</STATENAME>
+          <STATENAME>No</STATENAME>
+          </VAR>
+        <VAR NAME="X" TYPE="discrete" XPOS="28389" YPOS="18757"><FULLNAME>X</FULLNAME>
+          <STATENAME>Yes</STATENAME>
+          <STATENAME>No</STATENAME>
+          </VAR>
+        </VARIABLES>
+      <STRUCTURE><ARC PARENT="S" CHILD="B"/>
+        <ARC PARENT="L" CHILD="E"/>
+        <ARC PARENT="T" CHILD="E"/>
+        <ARC PARENT="B" CHILD="F"/>
+        <ARC PARENT="E" CHILD="F"/>
+        <ARC PARENT="S" CHILD="L"/>
+        <ARC PARENT="A" CHILD="T"/>
+        <ARC PARENT="E" CHILD="X"/>
+        </STRUCTURE>
+      <DISTRIBUTIONS><DIST TYPE="discrete"><PRIVATE NAME="A"/>
+          <DPIS><DPI>0.4 0.6 </DPI>
+            </DPIS>
+          </DIST>
+        <DIST TYPE="discrete"><CONDSET><CONDELEM NAME="S"/>
+            </CONDSET>
+          <PRIVATE NAME="B"/>
+          <DPIS><DPI INDEXES="0 ">0.7 0.3 </DPI>
+            <DPI INDEXES="1 ">0.3 0.7 </DPI>
+            </DPIS>
+          </DIST>
+        <DIST TYPE="discrete"><CONDSET><CONDELEM NAME="L"/>
+            <CONDELEM NAME="T"/>
+            </CONDSET>
+          <PRIVATE NAME="E"/>
+          <DPIS><DPI INDEXES="0 0 ">0.9 0.1 </DPI>
+            <DPI INDEXES="0 1 ">0.3 0.7 </DPI>
+            <DPI INDEXES="1 0 ">0.4 0.6 </DPI>
+            <DPI INDEXES="1 1 ">0.2 0.8 </DPI>
+            </DPIS>
+          </DIST>
+        <DIST TYPE="discrete"><CONDSET><CONDELEM NAME="B"/>
+            <CONDELEM NAME="E"/>
+            </CONDSET>
+          <PRIVATE NAME="F"/>
+          <DPIS><DPI INDEXES="0 0 ">0.8 0.2 </DPI>
+            <DPI INDEXES="0 1 ">0.2 0.8 </DPI>
+            <DPI INDEXES="1 0 ">0.3 0.7 </DPI>
+            <DPI INDEXES="1 1 ">0.1 0.9 </DPI>
+            </DPIS>
+          </DIST>
+        <DIST TYPE="discrete"><CONDSET><CONDELEM NAME="S"/>
+            </CONDSET>
+          <PRIVATE NAME="L"/>
+          <DPIS><DPI INDEXES="0 ">0.7 0.3 </DPI>
+            <DPI INDEXES="1 ">0.2 0.8 </DPI>
+            </DPIS>
+          </DIST>
+        <DIST TYPE="discrete"><PRIVATE NAME="S"/>
+          <DPIS><DPI>0.2 0.8 </DPI>
+            </DPIS>
+          </DIST>
+        <DIST TYPE="discrete"><CONDSET><CONDELEM NAME="A"/>
+            </CONDSET>
+          <PRIVATE NAME="T"/>
+          <DPIS><DPI INDEXES="0 ">0.7 0.3 </DPI>
+            <DPI INDEXES="1 ">0.2 0.8 </DPI>
+            </DPIS>
+          </DIST>
+        <DIST TYPE="discrete"><CONDSET><CONDELEM NAME="E"/>
+            </CONDSET>
+          <PRIVATE NAME="X"/>
+          <DPIS><DPI INDEXES="0 ">0.9 0.1 </DPI>
+            <DPI INDEXES="1 ">0.2 0.8 </DPI>
+            </DPIS>
+          </DIST>
+        </DISTRIBUTIONS>
+      </BNMODEL>
+    </ANALYSISNOTEBOOK>
