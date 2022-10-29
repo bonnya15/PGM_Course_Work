@@ -1,0 +1,89 @@
+<?xml version="1.0"?>
+<ANALYSISNOTEBOOK NAME="Notebook.bndefault" ROOT="bndefault">
+  <BNMODEL NAME="bndefault"><STATICPROPERTIES><FORMAT>MSR DTAS XML</FORMAT>
+        <VERSION>1.0</VERSION>
+        <CREATOR>Microsoft Research DTAS</CREATOR>
+        </STATICPROPERTIES>
+      <DYNAMICPROPERTIES><PROPERTYTYPE NAME="DTASDG_Notes" TYPE="stringarray"><COMMENT>Notes on the diagram</COMMENT>
+          </PROPERTYTYPE>
+        <PROPERTYTYPE NAME="MS_Addins" TYPE="stringarray"/>
+        <PROPERTYTYPE NAME="MS_Asym" TYPE="string"><COMMENT>Asymmetric assessment information stored as a string</COMMENT>
+          </PROPERTYTYPE>
+        </DYNAMICPROPERTIES>
+      <VARIABLES><VAR NAME="X1" TYPE="discrete" XPOS="9234" YPOS="1482"><FULLNAME>X1</FULLNAME>
+          <STATENAME>Yes</STATENAME>
+          <STATENAME>No</STATENAME>
+          </VAR>
+        <VAR NAME="X2" TYPE="discrete" XPOS="15901" YPOS="4736"><FULLNAME>X2</FULLNAME>
+          <STATENAME>Yes</STATENAME>
+          <STATENAME>No</STATENAME>
+          </VAR>
+        <VAR NAME="X3" TYPE="discrete" XPOS="4075" YPOS="4392"><FULLNAME>X3</FULLNAME>
+          <STATENAME>Yes</STATENAME>
+          <STATENAME>No</STATENAME>
+          </VAR>
+        <VAR NAME="X4" TYPE="discrete" XPOS="21696" YPOS="9260"><FULLNAME>X4</FULLNAME>
+          <STATENAME>Yes</STATENAME>
+          <STATENAME>No</STATENAME>
+          </VAR>
+        <VAR NAME="X5" TYPE="discrete" XPOS="5662" YPOS="9181"><FULLNAME>X5</FULLNAME>
+          <STATENAME>Yes</STATENAME>
+          <STATENAME>No</STATENAME>
+          </VAR>
+        <VAR NAME="X6" TYPE="discrete" XPOS="11959" YPOS="12091"><FULLNAME>X6</FULLNAME>
+          <STATENAME>Yes</STATENAME>
+          <STATENAME>No</STATENAME>
+          </VAR>
+        </VARIABLES>
+      <STRUCTURE><ARC PARENT="X1" CHILD="X2"/>
+        <ARC PARENT="X1" CHILD="X3"/>
+        <ARC PARENT="X2" CHILD="X4"/>
+        <ARC PARENT="X3" CHILD="X5"/>
+        <ARC PARENT="X5" CHILD="X6"/>
+        <ARC PARENT="X2" CHILD="X6"/>
+        </STRUCTURE>
+      <DISTRIBUTIONS><DIST TYPE="discrete"><PRIVATE NAME="X1"/>
+          <DPIS><DPI>0.8 0.2 </DPI>
+            </DPIS>
+          </DIST>
+        <DIST TYPE="discrete"><CONDSET><CONDELEM NAME="X1"/>
+            </CONDSET>
+          <PRIVATE NAME="X2"/>
+          <DPIS><DPI INDEXES="0 ">0.7 0.3 </DPI>
+            <DPI INDEXES="1 ">0.97 0.03 </DPI>
+            </DPIS>
+          </DIST>
+        <DIST TYPE="discrete"><CONDSET><CONDELEM NAME="X1"/>
+            </CONDSET>
+          <PRIVATE NAME="X3"/>
+          <DPIS><DPI INDEXES="0 ">0.2 0.8 </DPI>
+            <DPI INDEXES="1 ">0.6 0.4 </DPI>
+            </DPIS>
+          </DIST>
+        <DIST TYPE="discrete"><CONDSET><CONDELEM NAME="X2"/>
+            </CONDSET>
+          <PRIVATE NAME="X4"/>
+          <DPIS><DPI INDEXES="0 ">0.98 0.02 </DPI>
+            <DPI INDEXES="1 ">0.4 0.6 </DPI>
+            </DPIS>
+          </DIST>
+        <DIST TYPE="discrete"><CONDSET><CONDELEM NAME="X3"/>
+            </CONDSET>
+          <PRIVATE NAME="X5"/>
+          <DPIS><DPI INDEXES="0 ">0.95 0.05 </DPI>
+            <DPI INDEXES="1 ">0.75 0.25 </DPI>
+            </DPIS>
+          </DIST>
+        <DIST TYPE="discrete"><CONDSET><CONDELEM NAME="X5"/>
+            <CONDELEM NAME="X2"/>
+            </CONDSET>
+          <PRIVATE NAME="X6"/>
+          <DPIS><DPI INDEXES="0 0 ">0.95 0.05 </DPI>
+            <DPI INDEXES="0 1 ">0.9 0.1 </DPI>
+            <DPI INDEXES="1 0 ">0.5 0.5 </DPI>
+            <DPI INDEXES="1 1 ">0.3 0.7 </DPI>
+            </DPIS>
+          </DIST>
+        </DISTRIBUTIONS>
+      </BNMODEL>
+    </ANALYSISNOTEBOOK>
